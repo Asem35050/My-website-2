@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ата-аналар</title>
+    <link rel="stylesheet" href="Ата аналар.css"> <!-- Сыртқы CSS файлға сілтеме -->
+</head>
+<body>
+    <!-- Басшы бөлім -->
+    <header>
+        <h1>Ата-аналар</h1>
+    </header>
+
+    <!-- Негізгі контейнер -->
+    <div class="container">
+        <!-- Батырмалар -->
+        <div class="button-group">
+            <button onclick="toggleDetails('parent-rights')">Ата-ананың құқықтары</button>
+            <button onclick="toggleDetails('parent-responsibilities')">Ата-ананың міндеттері</button>
+            <button onclick="toggleDetails('parent-meetings')">Ата-аналар жиналысы</button>
+            <button onclick="toggleDetails('parent-support')">Ата-аналар қолдауы</button>
+        </div>
+
+        <!-- Бірінші беттегі сурет -->
+        <img class="main-image" src="https://inbusiness.kz/uploads/2022-7/U09aaPJX.jpg" alt="Ата-аналар суреті">
+
+        <!-- Ата-аналар бөлімінің мазмұны -->
+        <div id="parent-rights" class="details-content">
+            <h2>Ата-ананың құқықтары</h2>
+            <p>Ата-аналар мына құқықтарға ие:</p>
+            <ul>
+                <li>Баласының оқу үлгерімі туралы ақпарат алу.</li>
+                <li>Мектептегі іс-шараларға қатысу.</li>
+                <li>Баласын мектепке қабылдау және оны ауыстыру туралы шешім қабылдау.</li>
+                <li>Оқу жоспарлары мен бағдарламаларды қарастыру.</li>
+            </ul>
+        </div>
+
+        <div id="parent-responsibilities" class="details-content">
+            <h2>Ата-ананың міндеттері</h2>
+            <p>Ата-аналар мына міндеттерді орындауы тиіс:</p>
+            <ul>
+                <li>Баласының оқу үдерісіне бақылау жасау.</li>
+                <li>Баласының денсаулығына көңіл бөлу.</li>
+                <li>Мектеп талаптарын сақтау және қолдау көрсету.</li>
+                <li>Құжаттарды уақытында тапсыру және тіркеу.</li>
+            </ul>
+        </div>
+
+        <div id="parent-meetings" class="details-content">
+            <h2>Ата-аналар жиналысы</h2>
+            <p>Ата-аналар жиналыстары әр оқу тоқсанының соңында өтеді. Жиналыстарда:</p>
+            <ul>
+                <li>Баланың оқу нәтижелері мен тәртібі талқыланады.</li>
+                <li>Мектепте өткізілетін іс-шаралар мен жаңа өзгерістер туралы ақпарат беріледі.</li>
+                <li>Ата-аналар мен мұғалімдер арасындағы пікір алмасу жүргізіледі.</li>
+            </ul>
+        </div>
+
+        <div id="parent-support" class="details-content">
+            <h2>Ата-аналар қолдауы</h2>
+            <p>Ата-аналар мектепте баласының оқуын қолдай алады:</p>
+            <ul>
+                <li>Үй тапсырмаларына көмектесу және бағыт-бағдар беру.</li>
+                <li>Мектептің қоғамдық іс-шараларына қатысу.</li>
+                <li>Баласының тәртібін қадағалау және қолдау көрсету.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(section) {
+            const sections = ['parent-rights', 'parent-responsibilities', 'parent-meetings', 'parent-support'];
+            sections.forEach(id => {
+                const content = document.getElementById(id);
+                if (id === section) {
+                    content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

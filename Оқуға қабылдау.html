@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оқуға Қабылдау</title>
+    <link rel="stylesheet" href="Оқуға қабылдау.css"> <!-- CSS файлын байланыстыру -->
+</head>
+<body>
+    <!-- Басшы бөлім -->
+    <header>
+        <h1>Оқуға Қабылдау</h1>
+    </header>
+
+    <!-- Негізгі ақ фон -->
+    <div class="container">
+        <!-- Оқуға қабылдау бөлімі -->
+        <div class="button-group">
+            <button onclick="toggleDetails('admission-conditions')">Қабылдау шарттары</button>
+            <button onclick="toggleDetails('documents')">Құжаттар тізімі</button>
+            <button onclick="toggleDetails('admission-process')">Қабылдау процесі</button>
+            <button onclick="toggleDetails('application-form')">Өтініш беру</button>
+        </div>
+
+        <div id="admission-conditions" class="details-content">
+            <h2>Қабылдау шарттары</h2>
+            <p>Мектепке қабылдау үшін төмендегі шарттар мен талаптарды орындау қажет:</p>
+            <ul>
+                <li>Білім деңгейі: 9 сыныпты аяқтау.</li>
+                <li>Ата-анасының келісімі.</li>
+                <li>Сауықтыру немесе медициналық тексерістен өткендігі туралы құжат.</li>
+                <li>Үй тапсырмаларының және жобалық жұмыстарының орындалуы.</li>
+            </ul>
+            <p>Қабылдау тек арнайы комиссия арқылы жүзеге асырылады.</p>
+        </div>
+
+        <div id="documents" class="details-content">
+            <h2>Құжаттар тізімі</h2>
+            <p>Қабылдау үшін келесі құжаттар қажет:</p>
+            <ul>
+                <li>Туу туралы куәлік (немесе жеке куәлік).</li>
+                <li>Үй тапсырмалары мен жобалық жұмыстардың көшірмелері.</li>
+                <li>Ата-ананың келісімі.</li>
+                <li>Медициналық тексеріс құжаты.</li>
+            </ul>
+            <p>Барлық құжаттар алдын ала тіркеліп, қабылдау комиссиясына ұсынылуы тиіс.</p>
+        </div>
+
+        <div id="admission-process" class="details-content">
+            <h2>Қабылдау процесі</h2>
+            <p>Қабылдау процесі төмендегідей кезеңдерден тұрады:</p>
+            <ol>
+                <li>Құжаттарды қабылдау және тексеру.</li>
+                <li>Кандидаттармен сұхбат жүргізу.</li>
+                <li>Қабылдау комиссиясының шешімін жариялау.</li>
+                <li>Қабылданған оқушыларға арнайы іс-шаралар ұйымдастыру.</li>
+            </ol>
+            <p>Қабылдау процесі барлық кезеңдер бойынша ашық жүргізіледі, және әр қадамда ата-аналарға ақпарат беріледі.</p>
+        </div>
+
+        <!-- Өтініш беру бөлімі -->
+        <div id="application-form" class="details-content">
+            <h2>Өтініш беру</h2>
+            <form id="applicationForm">
+                <label for="firstName">Есім:</label><br>
+                <input type="text" id="firstName" name="firstName" placeholder="Есіміңізді енгізіңіз" required><br><br>
+
+                <label for="lastName">Тегі:</label><br>
+                <input type="text" id="lastName" name="lastName" placeholder="Тегіңізді енгізіңіз" required><br><br>
+
+                <label for="iin">ЖСН:</label><br>
+                <input type="text" id="iin" name="iin" placeholder="ЖСН енгізіңіз" required><br><br>
+
+                <label for="documents">Құжаттар:</label><br>
+                <textarea id="documents" name="documents" placeholder="Құжаттарыңызды енгізіңіз" required></textarea><br><br>
+
+                <button type="submit">Өтінішті жіберу</button>
+            </form>
+        </div>
+
+        <!-- Сурет -->
+        <img src="https://inbusiness.kz/uploads/2022-7/U09aaPJX.jpg" alt="Оқуға қабылдау суреті">
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <p>Мектебіміздің ресми сайты. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(section) {
+            const sections = ['admission-conditions', 'documents', 'admission-process', 'application-form'];
+            sections.forEach(id => {
+                const content = document.getElementById(id);
+                if (id === section) {
+                    content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('applicationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Өтінішіңіз қабылданды!');
+        });
+    </script>
+</body>
+</html>

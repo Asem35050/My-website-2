@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Үйірмелер</title>
+    <link rel="stylesheet" href="Үйірмелер.css">
+</head>
+<body>
+    <!-- Басшы бөлім -->
+    <header>
+        <h1>Үйірмелер</h1>
+    </header>
+
+    <!-- Негізгі контейнер -->
+    <div class="container">
+        <!-- Батырмалар -->
+        <div class="button-group">
+            <button onclick="toggleDetails('music')">Музыка үйірмесі</button>
+            <button onclick="toggleDetails('robotics')">Робототехника үйірмесі</button>
+            <button onclick="toggleDetails('sports')">Спорт үйірмесі</button>
+            <button onclick="toggleDetails('art')">Өнер үйірмесі</button>
+        </div>
+
+        <!-- Бірінші беттегі сурет -->
+        <img class="main-image" src="https://inbusiness.kz/uploads/2022-7/U09aaPJX.jpg" alt="Үйірмелер суреті">
+
+        <!-- Үйірмелердің мазмұны -->
+        <div id="music" class="details-content">
+            <h2>Музыка үйірмесі</h2>
+            <p>Музыка үйірмесінде мынандай жұмыстар атқарылады:</p>
+            <ul>
+                <li>Ән айту және музыкалық аспаптарда ойнау.</li>
+                <li>Музыкалық теория және нотаны оқыту.</li>
+                <li>Концерттік қойылымдар мен байқаулар ұйымдастыру.</li>
+            </ul>
+        </div>
+
+        <div id="robotics" class="details-content">
+            <h2>Робототехника үйірмесі</h2>
+            <p>Робототехника үйірмесінде оқушылар:</p>
+            <ul>
+                <li>Робот құрастыру және бағдарламалау негіздері.</li>
+                <li>Ғылыми және техникалық жобалармен айналысады.</li>
+                <li>Олимпиадалар мен конкурстарға қатысады.</li>
+            </ul>
+        </div>
+
+        <div id="sports" class="details-content">
+            <h2>Спорт үйірмесі</h2>
+            <p>Спорт үйірмесі түрлері:</p>
+            <ul>
+                <li>Футбол, баскетбол, волейбол секілді командалық спорт түрлері.</li>
+                <li>Жеке спорт түрлері: жүзу, дзюдо, күрес.</li>
+                <li>Спорттық жаттығулар мен сайыстар.</li>
+            </ul>
+        </div>
+
+        <div id="art" class="details-content">
+            <h2>Өнер үйірмесі</h2>
+            <p>Өнер үйірмесі арқылы оқушылар:</p>
+            <ul>
+                <li>Сурет салу, мүсін жасау және басқа да көркем өнер түрлері.</li>
+                <li>Шығармашылық жұмыстарды орындау.</li>
+                <li>Өнер көрмелері мен шеберлік сабақтарын ұйымдастыру.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(section) {
+            const sections = ['music', 'robotics', 'sports', 'art'];
+            sections.forEach(id => {
+                const content = document.getElementById(id);
+                if (id === section) {
+                    content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

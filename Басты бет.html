@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мектеп сайты</title>
+    <!-- CSS файлын қосу -->
+    <link rel="stylesheet" href="Басты бет.css">
+    <script src="Басты бет.js"></script>
+    <style>
+        .social-links img {
+            width: 30px; /* Иконкалардың ені */
+            height: 30px; /* Иконкалардың биіктігі */
+            margin: 0 10px; /* Иконкалар арасына аралық қосу */
+        }
+    </style>
+</head>
+<body>
+    <!-- Тіл таңдау бөлімі -->
+    <div class="language-selector-top">
+        <a href="#" onclick="changeLanguage('kk')">Қазақ</a>
+        <a href="#" onclick="changeLanguage('en')">English</a>
+        <a href="#" onclick="changeLanguage('ru')">Русский</a>
+        <a href="#" onclick="changeLanguage('tr')">Türkçe</a>
+    </div>
+
+    <!-- Басшы бөлім -->
+    <header>
+        <div class="container">
+            <h1 id="title">Мектебімізге қош келдіңіз!</h1>
+            <p id="subtitle">Білім мен тәрбие алаңы — біздің мектеп</p>
+        </div>
+
+        <!-- Қолданбалар -->
+        <div class="header-top">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://wa.me/77071666899" target="_blank">
+                        <img src="https://img.icons8.com/?size=100&id=16712&format=png&color=000000" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/nis_turkistan/profilecard/" target="_blank">
+                        <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=000000" alt="Instagram">
+                    </a>
+                    <a href="https://m.facebook.com/?ref=xav_ig_profile_page&wtsid=rdr_0Wtkl0Ze6C1lyQxeE" target="_blank">
+                        <img src="https://img.icons8.com/?size=100&id=118468&format=png&color=000000" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигациялық меню -->
+    <nav>
+        <div class="container">
+            <a href="Басты бет.html" id="home">Басты бет</a> <!-- Басты бетке сілтеме -->
+            <a href="Біз туралы.html" id="about">Біз туралы</a> <!-- Біз туралы бетіне сілтеме -->
+            <a href="Оқуға қабылдау.html" id="admissions">Оқуға қабылдау</a> <!-- Оқуға қабылдау бетіне сілтеме -->
+            <a href="Іс шаралар.html" id="events">Іс шаралар</a> <!-- Іс-шаралар бетіне сілтеме -->
+            <a href="Үйірмелер.html" id="camp">Үйірмелер</a> <!-- Үйірмелер бетіне сілтеме -->
+            <a href="Ата аналар.html" id="parents">Ата-аналар</a> <!-- Ата-аналар бетіне сілтеме -->
+        </div>
+        
+    </nav>
+
+    <!-- Негізгі контент -->
+    <div class="content container">
+        <!-- Жаңартылған сурет -->
+        <img src="https://www.bugin.kz/media/admin/2019/12/16/nish.jpg" 
+             alt="Мектеп суреті" 
+             style="width: 80%; height: auto; margin: 0 auto; display: block;">
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p id="footer">Мектебіміздің ресми сайты. Барлық құқықтар қорғалған.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript файлын қосу -->
+    <script src="script.js"></script>
+</body>
+</html>

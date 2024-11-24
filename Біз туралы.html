@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Біз туралы</title>
+    <link rel="stylesheet" href="Біз туралы.css"> <!-- CSS файлын қосу -->
+</head>
+<body>
+    <!-- Тіл таңдау -->
+    <div>
+        <a href="#" onclick="changeLanguage('kk')" style="color: #fff; text-decoration: none; padding: 5px 10px;">Қазақша</a>
+        <a href="#" onclick="changeLanguage('ru')" style="color: #fff; text-decoration: none; padding: 5px 10px;">Русский</a>
+        <a href="#" onclick="changeLanguage('en')" style="color: #fff; text-decoration: none; padding: 5px 10px;">English</a>
+        <a href="#" onclick="changeLanguage('tr')" style="color: #fff; text-decoration: none; padding: 5px 10px;">Türkçe</a>
+    </div>
+
+    <!-- Басшы бөлім -->
+    <header>
+        <h1 id="heading">Біз туралы</h1>
+    </header>
+
+    <!-- Негізгі ақ фон -->
+    <div class="container">
+        <!-- Батырмалар -->
+        <div class="button-group">
+            <a href="file:///C:/Users/Admin1/Downloads/_____________________.pdf" target="_blank" id="history-link">Құрылу тарихы</a>
+            <a href="file:///C:/Users/Admin1/Downloads/___________________________.pdf" target="_blank" id="intelligent-schools-link">Зияткерлік мектептер</a>
+            <a href="file:///C:/Users/Admin1/Downloads/________________.pdf" target="_blank" id="school-info-link">Мектеп туралы</a>
+            <a href="javascript:void(0);" id="mission-link" onclick="toggleMission()">Біздің миссия</a>
+        </div>
+
+        <!-- Біздің миссия бөлімі -->
+        <div id="mission-content">
+            <h2 id="mission-title">Миссия</h2>
+            <p id="mission-text">Өмірге қажетті білім дағдылары мен ұлттық және жаһандық құндылықтарды меңгерген бәсекеге қабілетті тұлғаны қалыптастыру.</p>
+            
+            <h2 id="vision-title">Пайым</h2>
+            <p id="vision-text">Қоғамның зияткерлік әлеуетін арттыратын жауапкершілігі жоғары, жан-жақты дамыған мектеп қауымдастығын құру.</p>
+
+            <h2 id="values-title">Құндылықтар</h2>
+            <ul id="values-list">
+                <li><strong>Құрмет</strong></li>
+                <li><strong>Отансүйгіштік және жауапкершілік</strong></li>
+                <li><strong>Жаһандық азаматтық</strong></li>
+                <li><strong>Денсаулық және саламаттық</strong></li>
+                <li><strong>Отбасылық құндылықтар мен дәстүрлер</strong></li>
+                <li><strong>Еңбекқорлық және шығармашылық</strong></li>
+                <li><strong>Ашықтық және адалдық</strong></li>
+            </ul>
+        </div>
+
+        <!-- Сурет -->
+        <img src="https://inbusiness.kz/uploads/2022-7/U09aaPJX.jpg" alt="Мектеп суреті" style="width: 100%; height: auto; opacity: 0.3;">
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <p id="footer-text">Мектебіміздің ресми сайты. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- JS файлын қосу -->
+</body>
+</html>
